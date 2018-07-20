@@ -8,7 +8,11 @@ namespace App_genesis.Infrastructure
     class InstanceLocator
     {
         #region Properties
-        public MainViewModel Main { get; set; }
+        public MainViewModel Main
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructors

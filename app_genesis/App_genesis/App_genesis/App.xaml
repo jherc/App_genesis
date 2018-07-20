@@ -4,8 +4,10 @@
              xmlns:infra="clr-namespace:App_genesis.Infrastructure"
              x:Class="App_genesis.App">
 	<Application.Resources>
+        
         <ResourceDictionary>
             <infra:InstanceLocator x:Key="Locator" />
         </ResourceDictionary>
-	</Application.Resources>
+	
+    </Application.Resources>
 </Application>
