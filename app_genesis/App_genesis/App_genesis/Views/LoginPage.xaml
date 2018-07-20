@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_genesis.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Padding="10, 20">
+                <Image
+                Source="logo"
+                WidthRequest="300">
+                </Image>
+                <Grid
+	            Margin="0,60">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    XAlign="Center"
+                    FontSize="20"
+		            Grid.Row="0" 
+		            Grid.Column="0"
+		            Text="Id">
+                    </Label>
+                    <Entry
+                    FontSize="14"
+		            Grid.Row="0" 
+		            Grid.Column="1"
+		            Placeholder="Ingrese su ID">
+                    </Entry>
+                    <Label
+                    XAlign="Center"
+                    FontSize="20"
+		            Grid.Row="1" 
+		            Grid.Column="0"
+		            Text="Contraseña">
+                    </Label>
+                    <Entry
+                    FontSize="14"
+		            Grid.Row="1" 
+		            Grid.Column="1"
+		            IsPassword="true"
+		            Placeholder="Ingrese su Contraseña">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator>
+                </ActivityIndicator>
+                <StackLayout
+	            Orientation="Horizontal">
+                    <Label
+		            HorizontalOptions="StartAndExpand"
+		            Text="Recordarme en este dispositivo"
+		            VerticalOptions="Center">
+                    </Label>
+                    <Switch
+		            HorizontalOptions="End">
+                    </Switch>
+                </StackLayout>
+                <StackLayout
+	            Margin="20,0">
+                    <Button
+		            BackgroundColor="Navy"
+		            BorderRadius="18"
+		            HeightRequest="36"
+		            Text="Ingresar"
+		            TextColor="White">
+                    </Button>
+                    <Button
+		            BackgroundColor="Purple"
+		            BorderRadius="18"
+                    HeightRequest="36"
+		            Text="Registrarse"
+		            TextColor="White">
+                    </Button>
+                </StackLayout>
+                <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal">
+                    <Image
+                    Source="facebook_logo"
+                    WidthRequest="80">
+                    </Image>
+                    <Image
+                    Source="twitter_logo"
+                    WidthRequest="80">
+                    </Image>
+                    <Image
+                    Source="instagram_logo"
+                    WidthRequest="80">
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
