@@ -4,114 +4,116 @@
              x:Class="App_genesis.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="App Genesis">
-            <ContentPage.Content>
-                 <ScrollView
+    <ContentPage.Content>
+        <ScrollView
                      BindingContext="{Binding Login}">
-                    <StackLayout
+            <StackLayout
                         Padding="5">
-                        <Image
+                <Image
                             Source="logo"
                             WidthRequest="300">
-                        </Image>
-                        <Grid
+                </Image>
+                <Grid
                             Margin="20,70"
                             VerticalOptions="CenterAndExpand">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
 		                    Grid.Row="0" 
 		                    Grid.Column="0"
 		                    Text="Id"
                             VerticalOptions="Center">
-                        </Label>
-                        <Entry
+                    </Label>
+                    <Entry
                             FontSize="14"
 		                    Grid.Row="0" 
 		                    Grid.Column="1"
 		                    Placeholder="Ingrese su ID"
                             Text="{Binding Id, Mode=TwoWay}">
-                        </Entry>
-                        <Label
+                    </Entry>
+                    <Label
 		                    Grid.Row="1" 
 		                    Grid.Column="0"
 		                    Text="Contraseña"
                             VerticalOptions="Center">
-                        </Label>
-                        <Entry
+                    </Label>
+                    <Entry
                             FontSize="14"
 		                    Grid.Row="1" 
 		                    Grid.Column="1"
 		                    IsPassword="true"
 		                    Placeholder="Ingrese su Contraseña"
                             Text="{Binding Password, Mode=TwoWay}">
-                        </Entry>
-                    </Grid>
-                    <ActivityIndicator
+                    </Entry>
+                </Grid>
+                <ActivityIndicator
                         IsRunning="{Binding IsRunning, Mode=TwoWay}"
                         VerticalOptions="CenterAndExpand">
-                    </ActivityIndicator>
-                    <StackLayout
+                </ActivityIndicator>
+                <StackLayout
                         Margin="10,0"
 	                    Orientation="Horizontal"
                         VerticalOptions="CenterAndExpand">
-                        <Label
+                    <Label
 		                   HorizontalOptions="StartAndExpand"
 		                   Text="Recordarme en este dispositivo"
 		                   VerticalOptions="Center">
-                        </Label>
-                        <Switch
+                    </Label>
+                    <Switch
                             IsToggled="{Binding IsRemembered, Mode=TwoWay}"
 		                    HorizontalOptions="End">
-                        </Switch>
-                    </StackLayout>
-                    <Label
+                    </Switch>
+                </StackLayout>
+                <Label
                         HorizontalOptions="Center"
                         Text="Olvidaste tu contraseña?"
                         TextColor="Blue"
                         VerticalOptions="CenterAndExpand">
-                    </Label>
-                    <StackLayout
+                </Label>
+                <StackLayout
 	                    Margin="20,0"
                         Orientation="Horizontal"
                         VerticalOptions="CenterAndExpand">
-                        <Button
+                    <Button
 		                   BackgroundColor="Navy"
 		                   BorderRadius="18"
                            Command="{Binding LoginCommand}"
 		                   HeightRequest="36"
                            HorizontalOptions="FillAndExpand"
+                           IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
 		                   Text="Ingresar"
 		                   TextColor="White">
-                        </Button>
-                        <Button
+                    </Button>
+                    <Button
 		                   BackgroundColor="Purple"
 		                   BorderRadius="18"
                            HeightRequest="36"
                            HorizontalOptions="FillAndExpand"
+                           IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
 		                   Text="Registrarse"
 		                   TextColor="White">
-                        </Button>
-                    </StackLayout>
-                    <StackLayout
+                    </Button>
+                </StackLayout>
+                <StackLayout
                        HorizontalOptions="Center"
                        Orientation="Horizontal"
                        VerticalOptions="EndAndExpand">
-                       <Image
+                    <Image
                           Source="facebook_logo"
                           WidthRequest="80">
-                       </Image>
-                       <Image
+                    </Image>
+                    <Image
                           Source="twitter_logo"
                           WidthRequest="80">
-                       </Image>
-                       <Image
+                    </Image>
+                    <Image
                           Source="instagram_logo"
                           WidthRequest="80">
-                       </Image>
-                    </StackLayout>
+                    </Image>
                 </StackLayout>
-            </ScrollView>
-            </ContentPage.Content>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
