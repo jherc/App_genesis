@@ -1,10 +1,7 @@
 ﻿namespace App_genesis.ViewModels
 {
+    using App_genesis.Views;
     using GalaSoft.MvvmLight.Command;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Text;
     using System.Windows.Input;
     using Xamarin.Forms;
 
@@ -12,16 +9,17 @@
     {
 
         #region Attributes
-        public string password;
-        public bool isRunning;
-        public bool isEnabled;
+        private string id;
+        private string password;
+        private bool isRunning;
+        private bool isEnabled;
         #endregion
 
         #region Properties
         public string Id
         {
-            get;
-            set;
+            get { return id; }
+            set { SetValue(ref id, value); }
         }
         public string Password
         {
@@ -50,6 +48,10 @@
         {
             this.IsRemembered = true;
             this.isEnabled = true;
+
+            this.Id = "000261755";
+            this.Password = "1234";
+
         }
         #endregion
 
@@ -100,10 +102,11 @@
             this.IsRunning = false;
             this.IsEnabled = true;
 
-            await Application.Current.MainPage.DisplayAlert(
-                    "Ok",
-                    "Bienvenido",
-                    "Aceptar");
+            this.Id = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Notes = new NotesViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new NotesPage());
         }
         #endregion
 
